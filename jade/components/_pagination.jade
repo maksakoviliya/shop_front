@@ -1,0 +1,20 @@
+nav.pagination.is-centered(role='navigation', aria-label='pagination')
+  a(href="#").pagination-previous
+    i.fas.fa-chevron-left
+  a(href="#").pagination-next
+    i.fas.fa-chevron-right
+  ul.pagination-list.is-hidden-mobile
+    li
+      a.pagination-link(aria-label='Goto page 1') 1
+    li
+      span.pagination-ellipsis …
+    li
+      a.pagination-link(aria-label='Goto page 45') 45
+    li
+      a.pagination-link.is-current(aria-label='Page 46', aria-current='page') 46
+    li
+      a.pagination-link(aria-label='Goto page 47') 47
+    li
+      span.pagination-ellipsis …
+    li
+      a.pagination-link(aria-label='Goto page 86') 86

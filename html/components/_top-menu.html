@@ -1,0 +1,8 @@
+
+<ul>
+  <li><a href="#">Главная</a></li>
+  <li class="has-submenu"><a href="#" data-target="megamenu">Каталог</a></li>
+  <li><a href="#">О нас</a></li>
+  <li><a href="#">Новости</a></li>
+  <li><a href="#">Контакты</a></li>
+</ul>

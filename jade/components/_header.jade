@@ -1,0 +1,135 @@
+header.header
+	.header__top
+		.container
+			.columns
+				.column.is-6.is-hidden-touch
+					a(href="mailto:email@info.ru").header__mail email@info.ru
+					a(href="tel:+74995552263").header__phone +7 499 555 22 63
+				.column.is-12.is-6-desktop.has-text-right
+					a(href="#").header__link Войти
+					a(href="#").header__link Регистрация
+	.header__navbar
+		.container
+			.custom__navbar.is-flex
+				.navbar__left
+					a(href="#").header__logo Логотип
+				.navbar__center.is-hidden-touch
+					nav.navbar__menu
+						include ../components/_top-menu
+				.navbar__right.is-flex
+					a(href="#", data-target="cart").header__cart
+						svg(enable-background='new 0 0 512 512', version='1.1', viewbox='0 0 512 512', xml:space='preserve', xmlns='http://www.w3.org/2000/svg')
+							path(d='m509.87 89.6c-2.133-2.133-4.267-4.267-8.533-4.267h-405.33l-10.667-55.466c0-4.267-6.4-8.533-10.667-8.533h-64c-6.399-1e-3 -10.666 4.266-10.666 10.666s4.267 10.667 10.667 10.667h55.467l51.2 260.27c6.4 34.133 38.4 59.733 72.533 59.733h245.33c6.4 0 10.667-4.267 10.667-10.667s-4.267-10.667-10.667-10.667h-243.2c-17.067 0-34.133-8.533-42.667-23.467l311.47-42.666c4.267 0 8.533-4.267 8.533-8.533l42.667-170.67s0-4.267-2.133-6.4zm-59.734 166.4l-311.47 40.533-38.4-192h386.13l-36.267 151.47z')
+							path(d='m181.33 384c-29.866 0-53.333 23.467-53.333 53.333 0 29.867 23.467 53.333 53.333 53.333 29.867 0 53.333-23.467 53.333-53.333 1e-3 -29.866-23.466-53.333-53.333-53.333zm0 85.333c-17.067 0-32-14.934-32-32s14.933-32 32-32 32 14.934 32 32-14.933 32-32 32z')
+							path(d='m394.67 384c-29.867 0-53.333 23.467-53.333 53.333 0 29.867 23.467 53.333 53.333 53.333 29.867 0 53.333-23.467 53.333-53.333s-23.467-53.333-53.333-53.333zm0 85.333c-17.067 0-32-14.934-32-32s14.933-32 32-32 32 14.934 32 32-14.934 32-32 32z')
+						span.badge 25
+					a(href="#").header__hamburger
+						span
+						span
+						span
+		.megamenu#megamenu
+			.container
+				.megamenu__inner
+					.columns
+						.column.is-3
+							.categories
+								a(href="#", data-target="handbags").is-active
+									span.icon
+										img(src="./img/categories/handbag.svg", alt="")
+									span Сумки
+								a(href="#", data-target="backbags")
+									span.icon
+										img(src="./img/categories/backpack.svg", alt="")
+									span Рюкзаки
+								a(href="#")
+									span.icon
+										img(src="./img/categories/purse.svg", alt="")
+									span Кошельки
+								a(href="#")
+									span.icon
+										img(src="./img/categories/travel.svg", alt="")
+									span Чемоданы
+								a(href="#")
+									span.icon
+										img(src="./img/categories/belt.svg", alt="")
+									span Ремни
+						.column.is-9
+							.categories__screen
+								.subcategories.is-active#handbags
+									.columns
+										.column.is-4
+											a(href="#", style="background-image: url('./img/banner/banner-1.jpg')").subcategory
+												span Женские
+										.column.is-4
+											a(href="#", style="background-image: url('./img/banner/banner-2.jpg')").subcategory
+												span Мужские
+										.column.is-4
+											a(href="#", style="background-image: url('./img/banner/banner-3.jpg')").subcategory.subcategory_short
+												span Спортивные
+											a(href="#", style="background-image: url('./img/banner/banner-4.jpg')").subcategory.subcategory_short
+												span Для путешествий
+								.subcategories#backbags
+									.columns
+										.column.is-4
+											a(href="#", style="background-image: url('./img/banner/banner-3.jpg')").subcategory.subcategory_short
+												span Детские
+											a(href="#", style="background-image: url('./img/banner/banner-4.jpg')").subcategory.subcategory_short
+												span Для путешествий
+										.column.is-4
+											a(href="#", style="background-image: url('./img/banner/banner-2.jpg')").subcategory
+												span Текстильные
+										.column.is-4
+											a(href="#", style="background-image: url('./img/banner/banner-1.jpg')").subcategory
+												span Кожаные
+		.cart#cart
+			.container
+				.cart__inner
+					.checkout-cart
+						.checkout-cart__items
+							.checkout-cart__item
+								a(href="#").checkout-cart__img
+									img(src="./img/products/product-1.jpg", alt="")
+								a(href="#").checkout-cart__content
+									span.checkout-cart__title Далеко-далеко за словесными горами в стране, гласных и согласных.
+									span.checkout-cart__additional.checkout-cart__additional_size XS
+									span.checkout-cart__additional.checkout-cart__additional_color
+										.button.color.is-rounded.is-small
+											span.color_red
+								p.checkout-cart__price 20 000
+								a(href="#").remove__btn.button.is-danger.is-outlined
+									span.icon
+										i.fas.fa-trash-alt
+							.checkout-cart__item
+								a(href="#").checkout-cart__img
+									img(src="./img/products/product-3.jpg", alt="")
+								a(href="#").checkout-cart__content
+									span.checkout-cart__title Далеко согласных.
+									span.checkout-cart__additional.checkout-cart__additional_size XS
+									span.checkout-cart__additional.checkout-cart__additional_color
+										.button.color.is-rounded.is-small
+											span.color_red
+								p.checkout-cart__price 20 000
+								a(href="#").remove__btn.button.is-danger.is-outlined
+									span.icon
+										i.fas.fa-trash-alt
+							.checkout-cart__item
+								a(href="#").checkout-cart__img
+									img(src="./img/products/product-2.jpg", alt="")
+								a(href="#").checkout-cart__content
+									span.checkout-cart__title Далеко-далеко за словесными горами в стране, гласных и согласных.
+									span.checkout-cart__additional.checkout-cart__additional_size XS
+									span.checkout-cart__additional.checkout-cart__additional_color
+										.button.color.is-rounded.is-small
+											span.color_red
+								p.checkout-cart__price 20 000
+								a(href="#").remove__btn.button.is-danger.is-outlined
+									span.icon
+										i.fas.fa-trash-alt
+					.checkout-total.m-b-15
+						include ./_checkout-total
+					.checkout-form__section
+						.field.is-grouped.is-multiline
+							.control
+								a(href="#").button.is-primary Оформить заказ
+							.control
+								a(href="#").button.is-info Перейти в корзину

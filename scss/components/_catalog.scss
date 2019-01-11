@@ -1,0 +1,50 @@
+.catalog{
+	.sort-block{
+		padding-bottom: 15px;
+		margin-top: 8px;
+		flex-wrap: wrap;
+		@include tablet{
+			margin-left: auto;
+			margin-right: 0;
+		}
+		p{
+			font-size: 12px;
+			white-space: nowrap;
+			margin-right: 8px;
+			margin-top: 3px;
+			width: 100%;
+			@include tablet{
+				width: auto;
+			}
+		}
+		a{
+			&:not(:last-child){
+				margin-right: 8px;
+			}
+			&:last-child{
+				margin-left: 8px;
+			}
+			&.is-active{
+				position: relative;
+				&:after{
+					content: '\f161';
+					font-family: 'Font Awesome 5 Free';
+					font-weight: 900;
+					margin-left: 3px;
+					font-size: 12px;
+				}
+			}
+			&.is-active_desc{
+				&:after{
+					content: '\f160';
+				}
+			}
+		}
+		.vertical-divider{
+			position: relative;
+			&:after{
+				content: "|";
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+mixin product-link(href, img, title, price_new, price_old, new_marker)
+	a(href= href).product-link
+		.product-img
+			img(src= img, alt="")
+		span.product-link__title= title
+		span.product-link__price.product-link__price_new= price_new
+		if price_old
+			span.product-link__price.product-link__price_old= price_old
+			span.product-link__marker.product-link__marker_sale Sale
+		if new_marker
+			span.product-link__marker.product-link__marker_new New
+		span.button.to-cart.is-primary.is-small В корзину

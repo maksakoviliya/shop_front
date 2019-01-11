@@ -1,0 +1,95 @@
+// Variables
+
+$side-menu-width: 280px;
+$section-padding: 1.5rem;
+$box-radius: 0;
+$control-radius: 0;
+
+// Colors
+$color-main: #2AC37D;
+$color-grey: #e5e5e5;
+$text-grey: #8d8d8d;
+
+$link: $text-grey;
+$link-hover: $color-main;
+
+$input-shadow: none;
+$input-focus-box-shadow-size: 3px;
+
+// Font weights
+$thin: 300;
+$normal: 400;
+$medium: 500;
+$bold: 600;
+$fa-font-path: '../fonts/FontAwesome/';
+
+$weight-semibold: $medium;
+$weight-bold: $bold;
+$label-weight: $normal;
+
+@import "./mixins/_font-family";
+@include font-face("Montserrat-shop", "../fonts/Montserrat/Montserrat-Light", $thin);
+@include font-face("Montserrat-shop", "../fonts/Montserrat/Montserrat-Regular", $normal);
+@include font-face("Montserrat-shop", "../fonts/Montserrat/Montserrat-Bold", $bold);
+
+@include font-face("Fira-shop", "../fonts/Fira/FiraSansExtraCondensed-Regular", $normal);
+
+$family-primary: "Montserrat-shop", sans-serif;
+$family-condensed: "Fira-shop", sans-serif;
+
+// Time
+$transition-time: .15s;
+
+// Плагины
+@import "../libs/font-awesome/fontawesome";
+@import "../libs/font-awesome/brands";
+@import "../libs/font-awesome/regular.scss";
+@import "../libs/font-awesome/solid.scss";
+@import "../libs/bulma/bulma";
+@import "../libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css";
+@import "../libs/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css";
+@import "../libs/ion.rangeSlider-master/css/ion.rangeSlider.min.css";
+
+// Custom helpers
+@import "./common/helpers";
+
+
+// @include font-face("LidiaPlain-artkitchen", "../fonts/LidiaPlain/LidiaPlain", $normal);
+
+// Общие элементы
+@import "./common/common";
+@import "./components/hero";
+@import "./elements/range-slider";
+@import "./components/pagination";
+
+// Блоки сайта
+@import "./components/header";
+@import "./components/menu";
+@import "./components/search";
+@import "./components/product-link";
+@import "./components/footer";
+
+// Home.html
+@import "./components/header-services";
+@import "./sections/banner";
+@import "./sections/featured";
+@import "./sections/advantages";
+
+// Catalog.html
+@import "./components/filter";
+@import "./components/catalog";
+
+// Product.html
+@import "./components/product-gallery";
+@import "./components/product-info";
+
+// Cart.html
+@import "./components/cart-table";
+@import "./components/cart-total";
+
+// Checkout.html
+@import "./components/checkout-form";
+@import "./components/checkout-cart";
+
+// Dashboard.html
+@import "./sections/dashboard";

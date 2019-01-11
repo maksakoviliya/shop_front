@@ -1,0 +1,11 @@
+.cart-total{
+	.cart-total__price{
+		position: relative;
+		font-size: 22px;
+		margin-bottom: 20px;
+		white-space: nowrap;
+		&:after{
+			content: '₽';
+		}
+	}
+}

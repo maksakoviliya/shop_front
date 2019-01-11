@@ -1,0 +1,116 @@
+.cart-table{
+	display: block;
+	@include tablet{
+		display: table;
+	}
+	thead{
+		font-family: $family-condensed;
+		display: none;
+		@include tablet{
+			display: table-header-group;
+		}
+	}
+	tr{
+		display: block;
+		padding-bottom: 20px;
+		border-bottom: 1px solid  $color-grey;
+		margin-bottom: 20px;
+		@include tablet{
+			display: table-row;
+		}
+		@include desktop{
+			&:last-child{
+				border-bottom: 0;
+			}
+		}
+		td{
+			display: block;
+			padding: 0;
+			border: 0;
+			@include tablet{
+				display: table-cell;
+				vertical-align: middle;
+				padding: 10px;
+			}
+		}
+	}
+	.cart-table__item{
+		align-items: center;
+	}
+	.cart-table__img{
+		margin-right: 10px;
+		position: relative;
+		margin-top: 5px;
+		display: block;
+		min-width: 100px;
+		max-width: 100px;
+		align-self: flex-start;
+		// height: 100px;
+		// overflow: hidden;
+		// img{
+		// 	position: absolute;
+		// 	left: 50%;
+		// 	top: 0;
+		// 	transform: translateX(-50%);
+		// }
+	}
+	.cart-table__title{
+		display: block;
+		color: #000;
+		&:hover,
+		&:focus{
+			color: $color-main;
+		}
+	}
+	.cart-table__price{
+		position: relative;
+		font-size: 22px;
+		margin-bottom: 10px;
+		text-align: center;
+		white-space: nowrap;
+		@include tablet{
+			margin-bottom: 0;
+		}
+		&:before{
+			position: relative;
+			&:before{
+				font-family: $family-condensed;
+			}
+			@include tablet{
+				display: none;
+			}
+		}
+		&.cart-table__price_item{
+			&:before{
+				content: 'Цена: ';
+			}
+		}
+		&.cart-table__price_total{
+			&:before{
+				content: 'Итого: ';
+			}
+		}
+		&:after{
+			content: '₽';
+		}
+	}
+	.cart-table__qty{
+		justify-content: center;
+		margin-bottom: 10px;
+		@include tablet{
+			margin-bottom: 0;
+		}
+	}
+	.cart-table__additional{
+		color: $text-grey;
+		font-family: $family-condensed;
+		font-weight: $thin;
+		&:not(:last-child){
+			margin-right: 10px;
+		}
+		.cart-table__label{
+			margin-right: 8px;
+		}
+	}
+
+}

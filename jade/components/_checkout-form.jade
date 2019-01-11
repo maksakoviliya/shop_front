@@ -1,0 +1,41 @@
+form.form.checkout-form
+	.checkout-form__section
+		.checkout-form__header.checkout-form__header_with-login
+			h3.subtitle Контактная информация
+			.login-block
+				span Уже зарегистрированы? 
+				a(href="#") Войти
+		.field.is-horizontal
+			.field-body
+				.field
+					.control
+						input.input(type="text", placeholder="Email")
+				.field
+					.control
+						input.input(type="tel", placeholder="Телефон")
+	.checkout-form__section
+		.checkout-form__header
+			h3.subtitle Адрес доставки
+		.field
+			.control
+					input.input(type="text", placeholder="Город")
+		.field
+			.control
+					textarea.textarea.has-fixed-size(placeholder="Адрес")
+	.checkout-form__section
+		.checkout-form__header
+			h3.subtitle Дополнительная информация
+		.field
+			.control
+					textarea.textarea.has-fixed-size(placeholder="Комментарий")
+	.checkout-total.m-b-30.is-hidden-desktop
+		include ./_checkout-total
+	.checkout-form__section
+		.field.is-grouped.is-grouped-multiline
+			.control
+				a(href="#").button.is-primary Оформить заказ
+			.control
+				a(href="#").button.is-ligth
+					span.icon
+						i.fas.fa-angle-left
+					span Продолжить покупки

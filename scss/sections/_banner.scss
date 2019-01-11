@@ -1,0 +1,50 @@
+.banner{
+	@include desktop{
+		padding: 30px 0;
+	}
+	@include widescreen{
+		padding: 50px 0;
+	}
+	.banner__slider{
+		.banner__slide{
+			background-size: cover;
+			background-position: center 70%;
+			padding: 30px;
+			&:after{
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+				background-color: rgba(0,0,0,.35);
+			}
+			.slide__content{
+				color: #fff;
+				position: relative;
+				z-index: 3;
+				max-width: 500px;
+				.slide__title{
+					font-size: 1.8rem;
+				}
+				.slide__text{
+					@include tablet{
+						height: 130px;
+						overflow: hidden;
+					}
+					font-size: 14px;
+				}
+				.slide__link{
+					background-color: transparent;
+					color: #fff;
+					font-weight: $thin;
+					font-family: $family-condensed;
+					text-transform: uppercase;
+					font-size: 18px;
+					margin-top: 8px;
+				}
+			}
+		}
+	}
+}

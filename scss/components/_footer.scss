@@ -1,0 +1,14 @@
+.footer{
+	a{
+		&.footer__logo{
+			text-transform: uppercase;
+			font-family: $family-condensed;
+		}
+	}
+	.footer__column-title{
+		margin-bottom: 1rem;
+	}
+	.footer__link{
+		display: block;
+	}
+}

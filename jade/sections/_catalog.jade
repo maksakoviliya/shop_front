@@ -1,0 +1,58 @@
+include ../components/_product-link
+section.section.catalog
+	.container
+		.columns
+			.column.is-3
+				include ../components/_filter
+			.column
+				.title-block.is-flex-tablet
+					p.title.is-3 Название категории
+					.sort-block.is-flex
+						p Сортировать по: 
+						//- a(href="#") Цене
+						a(href="#").is-active Цене
+						.vertical-divider
+						a(href="#") Популярности
+						//- a(href="#").is-active.is-active_desc Популярности
+				.columns.is-multiline.is-mobile
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-2.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-3.jpg', 'Название', '2 025', '1 222')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025', '', 'new')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025', '1 222')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025', '', 'new')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025', '', 'new')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+					.column.is-6-mobile.is-3-tablet
+						+product-link('#', './img/products/product-1.jpg', 'Название', '2 025')
+				include ../components/_pagination

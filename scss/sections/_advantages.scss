@@ -1,0 +1,23 @@
+.advantages{
+	.advantages__item{
+		position: relative;
+		padding-left: 65px;
+		width: 100%;
+	}
+	.advantages__img{
+		position: absolute;
+		left: 0;
+		top: -5px;
+	}
+	.advantages__title{
+		font-family: $family-condensed;
+		text-transform: uppercase;
+		font-weight: $bold;
+	}
+	.advantages__text{
+		font-size: 13px;
+		color: $text-grey;
+		height: 38px;
+		overflow: hidden;
+	}
+}

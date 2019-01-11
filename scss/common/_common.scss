@@ -1,0 +1,146 @@
+.page-link{
+  display: block;
+  cursor: pointer;
+  &:hover{
+    span{
+      color: $blue;
+    }
+    .page-link__image{
+      border-color: $blue;
+    }
+  }
+  span{
+    display: block;
+    color: #333;
+    font-size: 1.4rem;
+  }
+  .page-link__image{
+    position: relative;
+    padding: 10px;
+    height: 300px;
+    border: 1px solid lightgrey;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 5px;
+    &:after{
+      content: '';
+      position: absolute;
+      height: 10px;
+      left: 0;
+      width: 100%;
+      top: auto;
+      bottom: 0;
+      background-color: #fff;
+    }
+    img{
+      position: absolute;
+      width: calc(100% - 20px);
+      top: 10px;
+      height: calc(auto - 20px);
+    }
+  }
+}
+
+
+a,
+button{
+  transition: $transition-time;
+}
+
+body{
+}
+
+.wrapper{
+  position: relative;
+  transition: $transition-time * 2;
+  background-color: #fff;
+  &.menu-active{
+    transform: translateX(-$side-menu-width);
+    .wrapper__overlay{
+      position: absolute;
+      opacity: 1;
+      visibility: visible;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.5);
+      z-index: 10;
+    }
+  }
+  .wrapper__overlay{
+    transition: $transition-time * 2;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.section-title{
+  font-weight: $bold;
+  text-transform: uppercase;
+  position: relative;
+  font-family: $family-condensed;
+  z-index: 3;
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+  line-height: 60px;
+  @include desktop{
+    font-size: 25px;
+    line-height: 100px;
+  }
+  &:before{
+    content: attr(data-mask);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    font-family: $family-primary;
+    z-index: -1;
+    color: #f4f4f4;
+    font-size: 40px;
+    @include tablet{
+      font-size: 60px;
+    }
+    @include desktop{
+      font-size: 70px;
+    }
+    @include widescreen{
+      font-size: 80px;
+    }
+  }
+}
+
+.value-input{
+  display: flex;
+  align-items: center;
+  margin-left: -5px;
+  margin-right: -5px;
+  a{
+    line-height: 2.25em;
+    padding: 0 10px;
+  }
+  input{
+    width: 40px;
+    text-align: center;
+  }
+}
+
+.label{
+  font-family: $family-condensed;
+}
+
+.tabs-content{
+  position: relative;
+  .tab-content{
+    display: none;
+    &.is-active{
+      display: block;
+    }
+  }
+}
+
+.qty{
+  &:after{
+    content: 'шт.'
+  }
+}

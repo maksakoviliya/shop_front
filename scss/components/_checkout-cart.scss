@@ -1,0 +1,52 @@
+.checkout-cart{
+	.checkout-cart__item{
+		display: flex;
+		&:not(:last-child){
+			border-bottom: 1px solid  $color-grey;
+			margin-bottom: 10px;
+		}
+		padding: 5px 0;
+		.checkout-cart__img{
+			display: block;
+			min-width: 80px;
+			max-width: 80px;
+			margin-right: 10px;
+		}
+		.checkout-cart__title{
+			display: block;
+			font-family: $family-condensed;
+			line-height: 1;
+		}
+		.checkout-cart__additional{
+			&:not(:last-child){
+				margin-right: 6px;
+				padding-right: 6px;
+				border-right: 1px solid  $color-grey;
+			}
+			&_size{
+				line-height: 26px;
+				white-space: nowrap;
+				position: relative;
+				&:before{
+					content: 'Рамзер: ';
+					font-size: 13px;
+				}
+			}
+			&_color{
+				position: relative;
+				&:before{
+					content: 'Цвет: ';
+					font-size: 13px;
+				}
+			}
+		}
+		.checkout-cart__price{
+			white-space: nowrap;
+			line-height: 1;
+			margin-left: auto;
+			&:after{
+				content: '₽';
+			}
+		}
+	}
+}

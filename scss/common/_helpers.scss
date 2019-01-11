@@ -1,0 +1,111 @@
+%alic{
+	align-items: center;
+}
+
+%alis{
+	align-items: stretch;
+}
+
+%flex-centered{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.is-flex-centered{
+	@extend %flex-centered;
+}
+
+%inline-flex-centered{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+%inline-menu{
+	ul{
+		display: flex;
+		li{
+			a{
+				display: block;
+			}
+			// &:first-child{
+			// 	a{
+			// 		padding-left: $padding*0.5;
+			// 	}
+			// }
+			// &:last-child{
+			// 	a{
+			// 		padding-right: $padding*0.5;
+			// 	}
+			// }
+		}
+	}
+}
+
+.initializible{
+	> * {
+		opacity: 0;
+		transition: $transition-time;
+	}
+	&.initialized{
+		> * {
+			opacity: 1;
+		}
+	}
+}
+
+
+// Calculate Rem to Px
+@function px($size, $pxBaseSize) {
+  $remSize: $size / $pxBaseSize;
+  @return #{$remSize}rem;
+}
+
+$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px;
+    }
+  
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px;
+    }
+  }
+}
+
+.m-r-a{
+	margin-right: auto;
+}
+
+.m-l-a{
+	margin-left: auto;
+}
+
+%last-marginless{
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+%first-marginless{
+	&:first-child{
+		margin-left: 0;
+	}
+}
+
+%has-image-centered-rounded{
+	position: relative;
+	overflow: hidden;
+	border-radius: 50%;
+	img{
+		position: absolute;
+		left: 50%;
+		width: 100%;
+		height: auto;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

@@ -1,0 +1,159 @@
+section.section.dashboard
+	.container
+		.columns
+			.column.is-6
+				h3.subtitle Личные данные
+				.columns
+					.column.is-4
+						.box.has-text-centered
+							img(src="./img/avatar.jpg", alt="")
+							a(href="#").button.is-small.is-success.m-r-5
+								span.icon
+									i.fas.fa-pen
+							a(href="#").button.is-small.is-danger
+								span.icon
+									i.fas.fa-trash-alt
+					.column.is-8
+						.field.is-horizontal
+							.field-label
+								label.label Имя
+							.field-body
+								.field
+									.control.is-expanded
+										input(type="text").input
+						.field.is-horizontal
+							.field-label
+								label.label Фамилия
+							.field-body
+								.field
+									.control.is-expanded
+										input(type="text").input
+						.field.is-horizontal
+							.field-label
+								label.label Пол
+							.field-body
+								.field.is-narrow
+									.control
+										label.radio
+											input(type='radio', name='member')
+											|  Ж
+										label.radio
+											input(type='radio', name='member')
+											|  М
+			.column.is-1.is-hidden-touch
+				.vertical-line
+			.column.is-5.is-6-touch
+				h3.subtitle Контактные данные
+				.field.is-horizontal
+					.field-label
+						label.label Email
+					.field-body
+						.field
+							.control.is-expanded
+								input(type="mail").input
+				.field.is-horizontal
+					.field-label
+						label.label Телефон
+					.field-body
+						.field
+							.control.is-expanded
+								input(type="tel").input
+				.field.is-horizontal
+					.field-label
+						label.label Город
+					.field-body
+						.field
+							.control.is-expanded
+								input(type="tel").input
+				.field.is-horizontal
+					.field-label
+						label.label Адрес
+					.field-body
+						.field
+							.control.is-expanded
+								textarea.textarea.has-fixed-size
+		.columns
+			.column.is-10
+			.column.is-2
+				a(href="#").button.is-primary.m-l-a.is-fullwidth Сохранить
+		.columns.is-multiline
+			.column.is-12.tabs
+				ul
+					li.is-active
+						a Активные заказы
+					li
+						a Завершенные заказы
+					li
+						a Избранное
+			.column.is-12.tabs-content
+				.tab-content.is-active
+					table.table.is-fullwidth.cart-table.is-narrow
+						thead
+							th №
+							th Наименование
+							th Цена
+							th Количество
+							th Итого
+							th
+						tbody
+							tr
+								td
+									p 120552
+								td
+									.cart-table__item.is-flex
+										a(href="#").cart-table__img
+											img(src="./img/products/product-1.jpg", alt="")
+										.cart-table__content
+											a(href="#").cart-table__title Далеко-далеко за словесными горами в стране, гласных и согласных.
+											p.cart-table__additional.is-inline-flex
+												span.cart-table__label Размер: 
+												span.value XS
+											p.cart-table__additional.is-inline-flex
+												span.cart-table__label Цвет: 
+												span.button.is-small.is-rounded.color
+													span.color_red 
+								td
+									p.cart-table__price.cart-table__price_item 20 000
+								td
+									p.qty 1
+								td
+									p.cart-table__price.cart-table__price_total 20 000
+								td.has-text-centered
+									a(href="#").cart-table__delete.button.is-danger.is-outlined
+										i.far.fa-trash-alt
+				.tab-content
+					table.table.is-fullwidth.cart-table.is-narrow
+						thead
+							th №
+							th Наименование
+							th Цена
+							th Количество
+							th Итого
+							th
+						tbody
+							tr
+								td
+									p 120552
+								td
+									.cart-table__item.is-flex
+										a(href="#").cart-table__img
+											img(src="./img/products/product-3.jpg", alt="")
+										.cart-table__content
+											a(href="#").cart-table__title Далеко-далеко за словесными горами в стране, гласных и согласных.
+											p.cart-table__additional.is-inline-flex
+												span.cart-table__label Размер: 
+												span.value XS
+											p.cart-table__additional.is-inline-flex
+												span.cart-table__label Цвет: 
+												span.button.is-small.is-rounded.color
+													span.color_red 
+								td
+									p.cart-table__price.cart-table__price_item 20 000
+								td
+									p.qty 1
+								td
+									p.cart-table__price.cart-table__price_total 20 000
+								td.has-text-centered
+									a(href="#").cart-table__delete.button.is-danger.is-outlined
+										i.far.fa-trash-alt
+							

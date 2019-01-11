@@ -1,0 +1,22 @@
+.irs{
+	font-family: $body-family;
+	.irs-min,
+	.irs-max{
+		background-color: transparent;
+	}
+	.irs-to,
+	.irs-from,
+	.irs-single{
+		background-color: $color-main;
+		z-index: 3;
+		&:before{
+			border-top-color: $color-main;
+		}
+	}
+	.irs-bar{
+		background-color: $color-main;
+	}
+	.irs-handle{
+		border: 3px solid  $color-main;	
+	}
+}
